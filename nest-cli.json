@@ -3,6 +3,18 @@
   "collection": "@nestjs/schematics",
   "sourceRoot": "src",
   "compilerOptions": {
-    "deleteOutDir": true
+    "deleteOutDir": true,
+    "webpack": true
+  },
+  "projects": {
+    "axios-interceptor": {
+      "type": "library",
+      "root": "libs/axios-interceptor",
+      "entryFile": "index",
+      "sourceRoot": "libs/axios-interceptor/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/axios-interceptor/tsconfig.lib.json"
+      }
+    }
   }
 }
